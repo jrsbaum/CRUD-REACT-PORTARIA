@@ -1,19 +1,10 @@
 import express from "express";
-import db from "./config/database.js";
-import acessoRoutes from "./routes/index.js";
 import cors from "cors";
+import UserRoute from "./routes/UserRoute.js";
 
 const app = express();
-
-try {
-  await db.authenticate();
-  console.log("Database connected...");
-} catch (error) {
-  console.error("Connection error:", error);
-}
-
 app.use(cors());
 app.use(express.json());
-app.use("/acesso", acessoRoutes);
+app.use(UserRoute);
 
-app.listen(5000, () => console.log("Server running at port 5000"));
+app.listen(5000, () => console.log("Servidor rodando na porta 5000"));
