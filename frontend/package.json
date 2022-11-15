@@ -46,7 +46,8 @@
   "description": "This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).",
   "main": "index.js",
   "devDependencies": {
-    "bulma": "^0.9.4"
+    "bulma": "^0.9.4",
+    "node-sass": "^8.0.0"
   },
   "author": "",
   "license": "ISC"
